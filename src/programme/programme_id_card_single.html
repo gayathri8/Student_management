@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>ID Card</title>
+		<meta http-equiv="Content name=""-Type" content="text/html; charset=utf-8" />
+		<link href="../../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../../css/transcript1.css" rel = "stylesheet">
+		<link href="../../css/transcript.css" rel = "stylesheet">
+		<link rel="stylesheet" href="../../css/tinydropdown/tinydropdown.css" type="text/css" />
+		<script type="text/javascript" src="../../css/tinydropdown/tinydropdown.js"></script>
+		<link rel="stylesheet" href="../../css/styles.css" type="text/css" />
+	</head>
+
+	<style>
+        .alert {
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+
+	<header>
+		<table border="0" cellspacing="0" cellpadding="2" style="width:100%;" bgcolor="#FFF";>
+			<tr valign="top">
+				<td colspan="2" style="background-color:#F0F8FF; height:60px;">[onload;file='../../includes/header.html';getbody;noerr]</td>
+			</tr>
+		</table>
+		<script type="text/javascript">
+			var dropdown=new TINY.dropdown.init("dropdown", {id:'menu', active:'menuhover'});
+		</script>
+	</header>
+
+	<body style="background-color:#F0F8FF"> 
+		<div class="container" id="main">
+			<h2>ID Card</h2>
+			<form class="form-horizontal" role="form" method="POST" action="">
+				<div class="panel panel-primary">
+					<div class="panel-heading">Enter Details</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="alert alert-danger col-md-6 col-md-offset-3" [onshow.msg_err;magnet=div;noerr]>[onshow.msg_err]</div>
+						</div>
+						<div class="row">
+							<div class="col-md-1"></div>
+							<div class="col-md-10 form-group">
+								<label class="col-sm-4 control-label" for="enroll">Enrollment No. </label>
+								<div class="col-sm-8">
+									<input class="form-control" type="text" name="enroll" id="enroll" placeholder="Enter Enrollment No." required/>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-5"></div>
+							<div class="col-md-2 form-group">
+								<input id="button" class="btn btn-primary btn-block" style="margin-bottom:5%" type="Submit" value="Generate"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<footer class = "foot">[onload;file='../../includes/footer.html';getbody;noerr]</footer>
+	</body>
+</html>

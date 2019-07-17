@@ -1,0 +1,82 @@
+<html>
+<head>
+	<title>Registring new Staff</title>
+	<meta http-equiv="Content name=""-Type" content="text/html; charset=utf-8" />
+	<link href="../../css/studentreg.css" rel="stylesheet" name="" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/transcript.css">
+	<link rel="stylesheet" type="text/css" href="../../css/transcript1.css">
+	<link rel="stylesheet" href="../../css/tinydropdown/tinydropdown.css" type="text/css" />
+	<script type="text/javascript" src="../../css/tinydropdown/tinydropdown.js"></script>
+	<link rel="stylesheet" href="../../css/styles.css" type="text/css" />
+</head>
+<header>
+	<table border="0" cellspacing="0" cellpadding="2" style="width:100%;" bgcolor="#FFF";>
+		<tr valign="top">
+			<td colspan="2" style="height:60px;">[onload;file='../../includes/header.html';getbody;noerr]</td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		var dropdown=new TINY.dropdown.init("dropdown", {id:'menu', active:'menuhover'});
+	</script>
+</header>
+<body>
+
+
+	<h1>Manage Designations</h1>
+	<p [onshow.denied;magnet=p;noerr]>You are not authorised for this action.</p>
+	<div class="container" id="main" [onshow.permitted;magnet=div;noerr]>
+		<div class="panel panel-primary">
+			<div class="panel-heading">Add a Designation</div>
+			<div class="panel-body" class="col-xs-12">
+				<form class="form-horizontal" role="form" method="POST" action="staff_manage_staff_desgnations.php" enctype="multipart/form-data">
+					<div class="row col-md-offset-3 col-md-6 alert alert-success" align="left" style="font-size:14px; text-align:center">[onshow.success_add;magnet=div;noerr]</div>
+					<div class="row col-md-offset-3 col-md-6 alert alert-danger" align="left" style="font-size:14px; text-align:center">[onshow.msg;magnet=div;noerr]</div>
+					<div class="col-md-12 form-group">
+						<label class="col-sm-3 control-label" for="new_title">Designation Title</label>
+						<div class="col-sm-9">
+							<input name="new_title" type="text" class="form-control" id="new_title" placeholder="Designation Title" size="50" required />
+						</div>
+					</div>
+					<div class="col-md-12 form-group">
+						<label class="col-sm-3 control-label" for="new_rank">Rank</label>
+						<div class="col-sm-9">
+							<input name="new_rank" type="number" min="0" max="100" class="form-control" id="new_rank" placeholder="Rank" size="50" required />
+						</div>
+					</div>          		
+					<!--<div class="col-md-6 form-group">-->
+						<!--<label class="col-sm-12 control-label">[onshow.msg;magnet=p]</label>-->
+						<!--<p [onshow.success_add;magnet=p;noerr]>Success.</p>-->
+					<!--</div>-->
+					<input id="button" class="btn btn-primary btn-block" style="width:30%;margin-bottom:5%;margin-right:7%;float:right;" type="submit" name="submit_add" value="Add New Designation">
+				</form>
+			</div>
+		</div>
+
+		<div class="panel panel-primary">
+			<div class="panel-heading">Remove a Designation</div>
+			<div class="panel-body" class="col-xs-12">
+				<form class="form-horizontal" role="form" method="POST" action="staff_manage_staff_desgnations.php" enctype="multipart/form-data">
+					<div class="col-md-12 form-group">
+						<label class="col-sm-3 control-label" for="staff_designation_id">Designation</label>
+						<div class="col-sm-9">
+							<select class="form-control" name="staff_designation_id" required id = "staff_designation_id">
+								<option value="[designation_blk.staff_designation_id;block=option]" selected>[designation_blk.designation]</option>
+								<option selected value="">-</option>
+							</select>  
+						</div>
+					</div>
+					<div class="col-md-6 form-group">
+						<label class="col-sm-12 control-label">[onshow.msg;magnet=p]</label>
+						<label class="col-sm-12 control-label"><p [onshow.success_remove;magnet=p;noerr]>Success.</p></label>
+					</div>
+					<input id="button" class="btn btn-primary btn-block" style="width:30%;margin-bottom:5%;margin-right:7%;float:right;" type="submit" name="submit_remove" value="Remove Designation">
+				</form>
+			</div>
+		</div>
+
+	</div>
+	<footer class = "foot">[onload;file='../../includes/footer.html';getbody;noerr]</footer>
+</body>
+</html>
+

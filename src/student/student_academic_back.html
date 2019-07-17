@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Academic Back</title>
+	<meta http-equiv="Content name=""-Type" content="text/html; charset=utf-8" />
+	<link href="../../css/studentreg.css" rel="stylesheet" name="" type="text/css" />
+	<link href="../../css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/transcript.css">
+	<link rel="stylesheet" type="text/css" href="../../css/transcript1.css">
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' name="" type='text/css'>
+	<style>
+		a:hover {
+			text-decoration: none;
+		}
+	</style>
+	<link rel="stylesheet" href="../../css/tinydropdown/tinydropdown.css" type="text/css" />
+	<script type="text/javascript" src="../../css/tinydropdown/tinydropdown.js"></script>
+	<link rel="stylesheet" href="../../css/styles.css" type="text/css" />
+</head>
+<header>
+	<table border="0" cellspacing="0" cellpadding="2" style="width:100%;" bgcolor="#FFF";>
+		<tr valign="top">
+			<td colspan="2" style="height:60px;">[onload;file='../../includes/header.html';getbody;noerr]</td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		var dropdown=new TINY.dropdown.init("dropdown", {id:'menu', active:'menuhover'});
+	</script>
+</header>
+<body>
+	<div class="container" id="main">
+		<h1>Academic Back</h1>
+		<form class="form-horizontal" role="form" method="POST" enctype="multipart/form-data">
+			<div class="panel panel-primary">
+				<div class="panel-heading">Select the action</div>
+				<div class="panel-body" class="col-xs-12">
+					<div class="col-md-1 form-group"></div>
+					<div class="col-md-3 form-group">
+						<a href="back_exam.php">
+							<button id="back_paper" class="btn btn-primary btn-block" type="button">Back Paper</button>
+						</a>
+					</div>
+					<div class="col-md-2 form-group"></div>
+					<div class="col-md-3 form-group">
+						<a href="sem_back.php">
+							<button id="sem_back" class="btn btn-primary btn-block" type="button">Semester Back</button>
+						</a>
+					</div>
+					<div class="col-md-2 form-group"></div>
+					<div class="col-md-3 form-group">
+						<a href="year_back.php">
+							<button id="year_back" class="btn btn-primary btn-block" type="button">Year Back</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<footer class = "foot">[onload;file='../../includes/footer.html';getbody;noerr]</footer>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>View Course Structure</title>
+    <meta http-equiv="Content name=-Type" content="text/html; charset=utf-8" />
+    <link href="../../css/studentreg.css" rel="stylesheet" name="" type="text/css" />
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/transcript.css">
+    <link rel="stylesheet" type="text/css" href="../../css/transcript1.css">
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' name="" type='text/css'>
+    <link rel="stylesheet" href="../../css/tinydropdown/tinydropdown.css" type="text/css" />
+    <script type="text/javascript" src="../../css/tinydropdown/tinydropdown.js"></script>
+    <link rel="stylesheet" href="../../css/styles.css" type="text/css" />
+
+    <style>
+        .table {
+            background-color: white;
+            position: relative;
+            top: 20px;
+            border-radius: 5px;
+        }
+
+        thead {
+            background-color: #428bca;
+            color: white;
+        }
+    </style>
+
+</head>
+<header>
+    <table border="0" cellspacing="0" cellpadding="2" style="width:100%;" bgcolor="#FFF";>
+        <tr valign="top">
+            <td colspan="2" style="height:60px;">[onload;file='../../includes/header.html';getbody;noerr]</td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        var dropdown=new TINY.dropdown.init("dropdown", {id:'menu', active:'menuhover'});
+    </script>
+</header>
+<body id="body-color">
+<h1 style="text-align: center;">View Course Structure</h1>
+<div class="container" id="main">
+    <form class="form-horizontal" role="form" method="POST" enctype = "multipart/form-data" [onshow.show_form;magnet=form;noerr]>
+        <div class="panel panel-primary">
+            <div class="panel-heading">Course Grade CSV </div>
+            <div class="panel-body" class="col-xs-12">
+                <div class="row col-md-offset-1 col-md-10 alert alert-danger" align="left" style="font-size:14px; text-align:center">[onshow.msg_err;magnet=div]</div>
+                <div class="row col-md-offset-3 col-md-6 alert alert-success" align="left" style="font-size:14px; text-align:center">[onshow.success;magnet=div]</div>
+                <div class="row col-md-offset-3 col-md-6 alert alert-danger" align="left" style="font-size:14px; text-align:center">[onshow.error;magnet=div]</div>
+                <div class="col-md-12 form-group">
+                    <label class="col-sm-3 control-label" for="course_code">Program</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" name="course_code" id="course_code">
+                            <option value="[program.program_id;block=option]" selected>[program.program_name]</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label class="col-sm-3 control-label">Year of Joining</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" min="1999" name="year_of_joining">
+                    </div>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label class="col-sm-3 control-label" for="sem_code_of_joining">Sem of Joining</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" name="sem_code_of_joining" id="sem_code_of_joining">
+                            <option value="[sem_code.sem_code;block=option]" selected>[sem_code.title]</option>
+                        </select>
+                    </div>
+                </div>
+                <input id="button" class="btn btn-primary btn-block" style="margin-bottom:5%;margin-right:7%;float:right;width:10%;" name="submit" type="submit" name="submit" value="Submit">
+            </div>
+        </div>
+    </form>
+
+    <table class="table-bordered table" [onshow.show_table;magnet=table;noerr]>
+        <thead><td>Course Id</td><td>Course Code</td><td>Course Name</td><td>Semester Title</td></thead>
+        <tr>
+            <td>[coursesBlk.course_id;block=tr;noerr]</td>
+            <td>[coursesBlk.course_code;block=tr;noerr]</td>
+            <td>[coursesBlk.course_name;block=tr;noerr]</td>
+            <td>[coursesBlk.semester_title;block=tr;noerr]</td>
+        </tr>
+    </table>
+    <br><br>
+
+</div>
+<footer class = "foot">[onload;file='../../includes/footer.html';getbody;noerr]</footer>
+</body>
+</html>
