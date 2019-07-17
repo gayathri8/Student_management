@@ -1,0 +1,44 @@
+@font-face {
+	font-family: 'Signika';
+	font-style: normal;
+	font-weight: 400;
+	src: url(fonts/Signika/Signika-Regular.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'Laila';
+	font-style: normal;
+	font-weight: 400;
+	src: url(fonts/Laila/Laila-Regular.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'Dosis';
+	font-style: normal;
+	font-weight: 400;
+	src: url(fonts/Dosis/Dosis-Regular.ttf) format('truetype');
+}
+
+body {
+	font-family: 'Signika', sans-serif;
+	font-size: 10px;
+}
+
+table {
+	font-family: 'Signika';
+	font-size: 14px;
+	position: relative;
+}
+
+div {
+	font-family: 'Laila';
+	font-size: 13px;
+}
+
+li {
+	font-family: 'Laila';
+	font-size: 14px;
+	font-weight: bold;
+	display: inline-block;
+}
+

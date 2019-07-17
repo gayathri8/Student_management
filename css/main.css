@@ -1,0 +1,30 @@
+* { box-sizing: border-box; padding:0; margin: 0; }
+
+body {
+	font-family: "sans-serif","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+	color:black;
+	font-size:12px;
+}
+
+a {
+	color:black;
+}
+
+#heading {
+	font-size: 3em;
+	float: right;
+}
+
+#icon {
+	width: 10%;
+}
+
+.big {
+	font-size:3em;
+	word-wrap: break-word;
+}
+
+.navbar-inverse-i {
+	background-color: white;
+}
+
